@@ -1,4 +1,5 @@
-﻿using System;
+﻿using negocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,13 @@ namespace presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                DailyNegocio negocio = new DailyNegocio();
+                Session.Add("listaDaily", negocio.listar());
+                repetidor.DataSource = Session["listaDaily"];
+                repetidor.DataBind();
+            }     
         }
     }
 }
