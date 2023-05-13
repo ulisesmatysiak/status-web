@@ -15,6 +15,7 @@
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <h5 class="card-title">Fecha: <%#Eval("Fecha") %></h5>
+                                <%--<asp:Calendar runat="server" CssClass="card-title"> Fecha: <%#Eval("Fecha") %></asp:Calendar>--%>
                                 <p class="card-text">Score: <%#Eval("Score") %></p>
                                 <p class="card-text">Helped: <%#Eval("Helped") %></p>
                                 <%--<asp:CheckBox CssClass="card-text" Text="<%#Eval("Helped") %>" runat="server" />--%>
