@@ -4,8 +4,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row tex-center">
         <div class="mb-3">
-            <label for="calendario" class="form-label"> Fecha: </label>
-            <asp:Calendar runat="server" ID="calendario" CssClass="form-control"></asp:Calendar>   
+            <asp:TextBox runat="server" ID="txtId" CssClass="form-control"></asp:TextBox>   
+        </div> 
+        <div class="mb-3">
+            <label for="txtFecha" class="form-label"> Fecha: </label>
+            <asp:TextBox runat="server" ID="txtFecha" CssClass="form-control" TextMode="Date"></asp:TextBox>   
         </div> 
         <div class="mb-3">
             <label for="txtScore" class="form-label"> Score: </label>
@@ -13,7 +16,7 @@
         </div>  
         <div class="mb-3">
             <label for="txtWords" class="form-label"> Words:</label>
-            <asp:TextBox runat="server" ID="txtWords" CssClass="form-control" />
+            <asp:TextBox runat="server" ID="txtWords" CssClass="form-control" TextMode="MultiLine" />
         </div>  
         <div class="mb-3">
             <label for="chkHelp" class="form-label"> Helped?</label>

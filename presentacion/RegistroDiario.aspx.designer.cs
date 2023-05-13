@@ -11,7 +11,7 @@ namespace presentacion
 {
 
 
-    public partial class Daily
+    public partial class RegistroDiario
     {
 
         /// <summary>

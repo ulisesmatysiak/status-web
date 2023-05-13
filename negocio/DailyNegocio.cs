@@ -9,6 +9,38 @@ namespace negocio
 {
     public class DailyNegocio
     {
+        public Daily buscarPorID(string id)
+        {
+            Daily buscar = new Daily();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("select D.Id, D.Fecha, D.Score, D.Words, D.Helped from DAILY D where D.Id = " + id);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Daily aux = new Daily();
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Fecha = (DateTime)datos.Lector["Fecha"];
+                    aux.Score = (int)datos.Lector["Score"];
+                    aux.Words = (string)datos.Lector["Words"];
+                    aux.Helped = (bool)datos.Lector["Helped"];
+                    buscar = aux;
+                }
+                return buscar;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
         public List<Daily> listar()
         {
             List<Daily> lista = new List<Daily>();
@@ -36,8 +68,10 @@ namespace negocio
 
                 throw ex;
             }
-
-
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
 
         public void agregar(Daily nuevo)
@@ -65,9 +99,10 @@ namespace negocio
 
         public void eliminar(int Id)
         {
+            AccesoDatos datos = new AccesoDatos();
+
             try
             {
-                AccesoDatos datos = new AccesoDatos();
                 datos.setearConsulta("delete from DAILY where Id = @Id");
                 datos.setearParametro("@Id", Id);
                 datos.ejecutarAccion();
@@ -75,8 +110,11 @@ namespace negocio
             }
             catch (Exception ex)
             {
-
                 throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
     }

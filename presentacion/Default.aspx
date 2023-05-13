@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
-        <h5>Aqui se completa</h5>
+        <h5> Home </h5>
     </div>
 
     <div class="row">
@@ -15,14 +15,14 @@
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <h5 class="card-title">Fecha: <%#Eval("Fecha") %></h5>
-                                <%--<asp:Calendar runat="server" CssClass="card-title"> Fecha: <%#Eval("Fecha") %></asp:Calendar>--%>
-                                <p class="card-text">Score: <%#Eval("Score") %></p>
-                                <p class="card-text">Helped: <%#Eval("Helped") %></p>
-                                <%--<asp:CheckBox CssClass="card-text" Text="<%#Eval("Helped") %>" runat="server" />--%>
+                                <%--<asp:Calendar runat="server" CssClass="card-title" ID="calendario"></asp:Calendar>--%>
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-text">Words: <%#Eval("Words") %></h5>
+                                    <h5 class="card-title">Score: <%#Eval("Score") %></h5>
+                                    <p class="card-text">Words: <%#Eval("Words") %></p>
+                                    <p class="card-text">Helped: <%#Eval("Helped") %></p>
+                                    <%--<asp:CheckBox CssClass="card-text" Text="<%#Eval("Helped") %>" runat="server" />--%>
                                     <a href="Detalle.aspx?id=<%#Eval("Id") %>" class="btn btn-info">Ver en detalle</a>
                                 </div>
                             </div>
