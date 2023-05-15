@@ -26,7 +26,7 @@ namespace presentacion
                 nuevo.Fecha = DateTime.Parse(calendario.SelectedDate.ToString());
                 nuevo.Score = int.Parse(txtScore.Text);
                 nuevo.Words = txtWords.Text;
-                nuevo.Helped = bool.Parse(chkHelp.Text);
+                nuevo.Helped = bool.Parse(chkHelp.Checked.ToString());
 
                 negocio.agregar(nuevo);
 
