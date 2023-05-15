@@ -1,4 +1,5 @@
-﻿using negocio;
+﻿using dominio;
+using negocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,12 @@ namespace presentacion
                 Session.Add("listaDaily", negocio.listar());
                 repetidor.DataSource = Session["listaDaily"];
                 repetidor.DataBind();
+
+                
+
             }     
         }
+
+        
     }
 }

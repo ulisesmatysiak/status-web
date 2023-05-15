@@ -40,5 +40,29 @@ namespace presentacion
                 throw ex;
             }
         }
+
+        public bool ConfirmarEliminacion { get; set; }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ConfirmarEliminacion = true;
+        }
+
+        protected void btnConfirmarEliminacion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (chkConfirmarEliminacion.Checked)
+                {
+                    DailyNegocio negocio = new DailyNegocio();
+                    negocio.eliminar(int.Parse(txtId.Text));
+                    Response.Redirect("Default.aspx");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
