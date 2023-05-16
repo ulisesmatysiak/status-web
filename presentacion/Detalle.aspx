@@ -13,7 +13,7 @@
         </div>
         <div class="mb-3">
             <label for="txtFecha" class="form-label">Fecha: </label>
-            <asp:TextBox runat="server" ID="txtFecha" CssClass="form-control" TextMode="Date"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtFecha" CssClass="form-control"></asp:TextBox>
         </div>
         <div class="mb-3">
             <label for="txtScore" class="form-label">Score: </label>

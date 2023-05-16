@@ -28,10 +28,10 @@ namespace presentacion
                     Daily seleccionado = negocio.buscarPorID(id);
 
                     txtId.Text = seleccionado.Id.ToString();
-                    txtFecha.Text = seleccionado.Fecha.ToString();
+                    txtFecha.Text = seleccionado.Fecha.ToString("D");
                     txtWords.Text = seleccionado.Words;
                     txtScore.Text = seleccionado.Score.ToString();
-                    chkHelp.Text = seleccionado.Helped.ToString();
+                    chkHelp.Checked = bool.Parse(seleccionado.Helped.ToString());
                 }
             }
             catch (Exception ex)

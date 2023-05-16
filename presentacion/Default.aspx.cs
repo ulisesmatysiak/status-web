@@ -19,9 +19,6 @@ namespace presentacion
                 Session.Add("listaDaily", negocio.listar());
                 repetidor.DataSource = Session["listaDaily"];
                 repetidor.DataBind();
-
-                
-
             }     
         }
 

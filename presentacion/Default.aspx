@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
-        <h5> Home </h5>
+        <h5>Home </h5>
     </div>
 
     <div class="row">
@@ -15,7 +15,6 @@
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <h5 class="card-title">Fecha: <%#Eval("Fecha") %></h5>
-                                <%--<asp:Calendar runat="server" CssClass="card-title" ID="calendario"></asp:Calendar>--%>
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
