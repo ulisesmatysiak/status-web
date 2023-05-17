@@ -48,7 +48,8 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select Id, Fecha, Score, Words, Helped from DAILY");
+                //datos.setearConsulta("select Id, Fecha, Score, Words, Helped from DAILY");
+                datos.setearProcedimiento("storedListar");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -80,7 +81,8 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("insert into DAILY(Fecha, Score, Words, Helped) values (@Fecha, @Score, @Words, @Helped)");
+                //datos.setearConsulta("insert into DAILY(Fecha, Score, Words, Helped) values (@Fecha, @Score, @Words, @Helped)");
+                datos.setearProcedimiento("storedAgregar");
                 datos.setearParametro("@Fecha", nuevo.Fecha);
                 datos.setearParametro("@Score", nuevo.Score);
                 datos.setearParametro("@Words", nuevo.Words);
@@ -103,7 +105,8 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("delete from DAILY where Id = @Id");
+                // datos.setearConsulta("delete from DAILY where Id = @Id");
+                datos.setearProcedimiento("storedEliminar");
                 datos.setearParametro("@Id", Id);
                 datos.ejecutarAccion();
 
