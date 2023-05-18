@@ -40,7 +40,7 @@
 
                     <% if (ConfirmarEliminacion)
                         { %>
-                    <asp:CheckBox Text="Confirmar eliminacion" runat="server" ID="chkConfirmarEliminacion" />
+                    <asp:CheckBox Text="Confirmar eliminacion" runat="server" ID="chkConfirmarEliminacion" CssClass="text-white" />
                     <asp:Button Text="Eliminar" runat="server" ID="btnConfirmarEliminacion" CssClass="btn btn-danger" OnClick="btnConfirmarEliminacion_Click" />
                     <% } %>
                 </ContentTemplate>
