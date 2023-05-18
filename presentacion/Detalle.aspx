@@ -12,20 +12,20 @@
             <asp:TextBox runat="server" ID="txtId" CssClass="form-control"></asp:TextBox>
         </div>
         <div class="mb-3">
-            <label for="txtFecha" class="form-label">Fecha: </label>
-            <asp:TextBox runat="server" ID="txtFecha" CssClass="form-control"></asp:TextBox>
+            <label for="txtFecha" class="form-label text-white">Fecha: </label>
+            <asp:TextBox runat="server" ID="txtFecha" CssClass="form-control bg-dark text-white"  ></asp:TextBox>
         </div>
         <div class="mb-3">
-            <label for="txtScore" class="form-label">Score: </label>
-            <asp:TextBox runat="server" ID="txtScore" CssClass="form-control" />
+            <label for="txtScore" class="form-label text-white">Score: </label>
+            <asp:TextBox runat="server" ID="txtScore" CssClass="form-control bg-dark text-white" />
         </div>
         <div class="mb-3">
-            <label for="txtWords" class="form-label">Words:</label>
-            <asp:TextBox runat="server" ID="txtWords" CssClass="form-control" TextMode="MultiLine" />
+            <label for="txtWords" class="form-label text-white">Words:</label>
+            <asp:TextBox runat="server" ID="txtWords" CssClass="form-control bg-dark text-white" TextMode="MultiLine" />
         </div>
         <div class="mb-3">
-            <label for="chkHelp" class="form-label">Helped?</label>
-            <asp:CheckBox Text="" runat="server" ID="chkHelp" CssClass="form-control" />
+            <label for="chkHelp" class="form-label text-white">Helped?</label>
+            <asp:CheckBox Text="" runat="server" ID="chkHelp" CssClass="form-control bg-dark text-white" />
         </div>
     </div>
 
