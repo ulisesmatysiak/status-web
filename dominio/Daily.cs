@@ -12,11 +12,6 @@ namespace dominio
 
         public DateTime Fecha { get; set; }
 
-        public override string ToString()
-        {
-            return Fecha.ToString("d");
-        }
-
         public int Score { get; set; }
 
         public string Words { get; set; }
