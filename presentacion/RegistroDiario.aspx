@@ -10,7 +10,7 @@
         </div>
         <div class="mb-3">
             <label for="calendario" class="form-label text-white">Fecha: </label>
-            <asp:Calendar runat="server" ID="calendario" CssClass="form-control bg-dark text-white"></asp:Calendar>
+            <asp:Calendar runat="server" ID="calendario" CssClass="form-control bg-dark text-white border-dark" DayStyle-ForeColor="White" NextPrevStyle-ForeColor="White"></asp:Calendar>
         </div>
         <div class="mb-3">
             <label for="txtScore" class="form-label text-white">Score: </label>
@@ -18,11 +18,11 @@
         </div>
         <div class="mb-3">
             <label for="txtWords" class="form-label text-white">Words:</label>
-            <asp:TextBox runat="server" ID="txtWords" CssClass="form-control bg-dark text-white" />
+            <asp:TextBox runat="server" ID="txtWords" CssClass="form-control bg-dark text-white" TextMode="MultiLine" />
         </div>
         <div class="mb-3">
             <label for="chkHelp" class="form-label text-white">Help ?</label>
-            <asp:CheckBox Text="" runat="server" ID="chkHelp" CssClass="form-control bg-dark text-white " />
+            <asp:CheckBox Text="" runat="server" ID="chkHelp" CssClass="form-control bg-dark text-white border-dark" />
         </div>
         <div>
             <asp:Button ID="btnAceptar" Text="Aceptar" runat="server" CssClass="btn btn-success" OnClick="btnAceptar_Click" />
