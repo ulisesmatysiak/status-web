@@ -48,7 +48,7 @@ namespace negocio
 
             try
             {
-                //datos.setearConsulta("select Id, Fecha, Score, Words, Helped from DAILY");
+                //datos.setearConsulta("select Id, Fecha, Score, Words, Helped from DAILY order by Fecha desc");
                 datos.setearProcedimiento("storedListar");
                 datos.ejecutarLectura();
 
