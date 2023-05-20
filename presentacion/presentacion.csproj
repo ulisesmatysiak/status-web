@@ -67,12 +67,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="RegistroDiario.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="RegistroDiario.aspx" />
+    <Content Include="Home.aspx" />
     <Content Include="Detalle.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegistroDiario.aspx.cs">
       <DependentUpon>RegistroDiario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -80,12 +88,12 @@
     <Compile Include="RegistroDiario.aspx.designer.cs">
       <DependentUpon>RegistroDiario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Detalle.aspx.cs">
       <DependentUpon>Detalle.aspx</DependentUpon>
