@@ -1,6 +1,7 @@
 ﻿using dominio;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,17 +43,16 @@ namespace negocio
             }
         }
 
-        public List<Daily> listar(User usuario)
+        public List<Daily> listar(Usuario usuario)
         {
             List<Daily> lista = new List<Daily>();
             AccesoDatos datos = new AccesoDatos();
+            
 
             try
             {
-                datos.setearConsulta("select Id, Fecha, Score, Words, Helped, IdUser from DAILY where IdUser = @Id" );
+                datos.setearConsulta("select Id, Fecha, Score, Words, Helped, IdUser from DAILY where IdUser = @Id");
                 datos.setearParametro("@Id", usuario.Id);
-                //datos.setearProcedimiento("storedListar");
-                
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -64,7 +64,7 @@ namespace negocio
                     aux.Score = (int)datos.Lector["Score"];
                     aux.Words = (string)datos.Lector["Words"];
                     aux.Helped = (bool)datos.Lector["Helped"];
-                    aux.User = new User();
+                    aux.User = new Usuario();
                     aux.User.Id = (int)datos.Lector["IdUser"];
                           
                     lista.Add(aux);

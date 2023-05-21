@@ -18,6 +18,6 @@ namespace dominio
 
         public bool Helped { get; set; }
 
-        public User User { get; set; }
+        public Usuario User { get; set; }
     }
 }

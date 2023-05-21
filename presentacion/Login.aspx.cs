@@ -18,7 +18,7 @@ namespace presentacion
 
         protected void btnAcceder_Click(object sender, EventArgs e)
         {
-            User user = new User();
+            Usuario user = new Usuario();
             UserNegocio negocio = new UserNegocio();
 
             try

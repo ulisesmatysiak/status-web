@@ -19,7 +19,7 @@ namespace presentacion
                     Response.Redirect("Login.aspx", false);
                 else
                 {
-                    User usuario = (User)Session["user"];
+                    Usuario usuario = (Usuario)Session["user"];
                     lblUser.Text = usuario.Email;
                 }
             }

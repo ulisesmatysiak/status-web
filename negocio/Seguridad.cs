@@ -11,7 +11,7 @@ namespace negocio
     {
         public static bool sesionActiva(object usuario)
         {
-            User user = usuario != null ? (User)usuario : null;
+            Usuario user = usuario != null ? (Usuario)usuario : null;
             if (user != null && user.Id != 0)
                 return true;
             else
