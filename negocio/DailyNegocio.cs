@@ -42,16 +42,17 @@ namespace negocio
             }
         }
 
-        public List<Daily> listar(User user)
+        public List<Daily> listar(User usuario)
         {
             List<Daily> lista = new List<Daily>();
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.setearConsulta("select D.Id, D.Fecha, D.Score, D.Words, D.Helped, U.Id from DAILY D, USERS U where  D.IdUser =  " + user );
+                datos.setearConsulta("select Id, Fecha, Score, Words, Helped, IdUser from DAILY where IdUser = @Id" );
+                datos.setearParametro("@Id", usuario.Id);
                 //datos.setearProcedimiento("storedListar");
-                //datos.setearParametro("@id", user.Id);
+                
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
