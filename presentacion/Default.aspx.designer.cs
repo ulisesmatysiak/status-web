@@ -11,7 +11,7 @@ namespace presentacion
 {
 
 
-    public partial class Default1
+    public partial class Default
     {
 
         /// <summary>

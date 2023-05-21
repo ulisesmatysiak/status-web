@@ -14,10 +14,13 @@ namespace presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            User user = new User();
+
             if (!IsPostBack)
             {
                 DailyNegocio negocio = new DailyNegocio();
-                Session.Add("listaDaily", negocio.listar());
+                //User user = new User();
+                Session.Add("listaDaily", negocio.listar(user));
                 repetidor.DataSource = Session["listaDaily"];
                 repetidor.DataBind();
             }    

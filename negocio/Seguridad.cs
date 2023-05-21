@@ -18,10 +18,10 @@ namespace negocio
                 return false;
         }
 
-        public static bool esAdmin(object usuario)
-        {
-            User user = usuario != null ? (User)usuario : null;
-            return user != null ? user.Admin : false;
-        }
+        //public static bool esAdmin(object usuario)
+        //{
+        //    User user = usuario != null ? (User)usuario : null;
+        //    return user != null ? user.Admin : false;
+        //}
     }
 }

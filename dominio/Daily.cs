@@ -17,5 +17,7 @@ namespace dominio
         public string Words { get; set; }
 
         public bool Helped { get; set; }
+
+        public User User { get; set; }
     }
 }

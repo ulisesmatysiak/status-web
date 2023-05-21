@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace negocio
 {
     public class DailyNegocio
@@ -41,32 +42,36 @@ namespace negocio
             }
         }
 
-        public List<Daily> listar()
+        public List<Daily> listar(User user)
         {
             List<Daily> lista = new List<Daily>();
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                //datos.setearConsulta("select D.Id, D.Fecha, D.Score, D.Words, D.Helped, D.IdUser, U.Id from DAILY D, USERS U where  D.IdUser = U.Id order by Fecha desc");
-                datos.setearProcedimiento("storedListar");
+                datos.setearConsulta("select D.Id, D.Fecha, D.Score, D.Words, D.Helped, U.Id from DAILY D, USERS U where  D.IdUser =  " + user );
+                //datos.setearProcedimiento("storedListar");
+                //datos.setearParametro("@id", user.Id);
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Daily aux = new Daily();
+                    
                     aux.Id = (int)datos.Lector["Id"];
                     aux.Fecha = (DateTime)datos.Lector["Fecha"];
                     aux.Score = (int)datos.Lector["Score"];
                     aux.Words = (string)datos.Lector["Words"];
                     aux.Helped = (bool)datos.Lector["Helped"];
+                    aux.User = new User();
+                    aux.User.Id = (int)datos.Lector["IdUser"];
+                          
                     lista.Add(aux);
                 }
                 return lista;
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
             finally
