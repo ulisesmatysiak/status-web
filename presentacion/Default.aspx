@@ -60,16 +60,24 @@
         </div>
     </div>
 
-    <div class="footer text-white  ">
-        <p>
-            En las cards se mostrarán los datos de registro diario en orden desde el último.
-        </p>
+    <footer class="text-white">
+        <p>En las cards se mostrarán los datos de registro diario en orden desde el último.</p>
         <ul>
-            <li>Fecha del registro</li>
-            <li>Score: El puntaje del día</li>
-            <li>Words: En este campo se mostrará lo que escribas sobre tu día </li>
-            <li>Help ? Si fue de ayuda escribir sobre tu día se mostrara tildado en lo contrario sin tildar</li>
-            <li>Botón de detalle para acceder a la pantalla de Detalle donde se podra eliminar el registro</li>
+            <li>Fecha del registro.</li>
+            <li>Score: El puntaje del día.</li>
+            <li>Words: En este campo se mostrará lo que escribas sobre tu día. </li>
+            <li>Help ? Si fue de ayuda escribir sobre tu día se mostrara tildado en lo contrario sin tildar.</li>
+            <li>Botón de detalle para acceder a la pantalla de Detalle donde se podra eliminar el registro.</li>
         </ul>
-    </div>
+    </footer>
+    <%--<div class="footer text-white">
+        <p>En las cards se mostrarán los datos de registro diario en orden desde el último.</p>
+        <ul>
+            <li>Fecha del registro.</li>
+            <li>Score: El puntaje del día.</li>
+            <li>Words: En este campo se mostrará lo que escribas sobre tu día. </li>
+            <li>Help ? Si fue de ayuda escribir sobre tu día se mostrara tildado en lo contrario sin tildar.</li>
+            <li>Botón de detalle para acceder a la pantalla de Detalle donde se podra eliminar el registro.</li>
+        </ul>
+    </div>--%>
 </asp:Content>
