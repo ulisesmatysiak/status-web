@@ -51,7 +51,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select Id, Fecha, Score, Words, Helped, IdUser from DAILY where IdUser = @Id");
+                datos.setearConsulta("select Id, Fecha, Score, Words, Helped, IdUser from DAILY where IdUser = @Id order by Fecha desc");
                 datos.setearParametro("@Id", usuario.Id);
                 datos.ejecutarLectura();
 
