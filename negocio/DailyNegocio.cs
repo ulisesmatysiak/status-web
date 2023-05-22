@@ -84,15 +84,17 @@ namespace negocio
         public void agregar(Daily nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
+            Usuario user = new Usuario();
 
             try
             {
-                //datos.setearConsulta("insert into DAILY(Fecha, Score, Words, Helped) values (@Fecha, @Score, @Words, @Helped)");
-                datos.setearProcedimiento("storedAgregar");
+                datos.setearConsulta("insert into DAILY(Fecha, Score, Words, Helped, IdUser) values (@Fecha, @Score, @Words, @Helped, @IdUser)");
+                //datos.setearProcedimiento("storedAgregar");
                 datos.setearParametro("@Fecha", nuevo.Fecha);
                 datos.setearParametro("@Score", nuevo.Score);
                 datos.setearParametro("@Words", nuevo.Words);
                 datos.setearParametro("@Helped", nuevo.Helped);
+                datos.setearParametro("@IdUser", nuevo.User.Id);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

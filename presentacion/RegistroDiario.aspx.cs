@@ -21,16 +21,18 @@ namespace presentacion
             try
             {
                 Daily nuevo = new Daily();
+                Usuario usuario = new Usuario();
                 DailyNegocio negocio = new DailyNegocio();
 
                 nuevo.Fecha = DateTime.Parse(calendario.SelectedDate.ToString());
                 nuevo.Score = int.Parse(txtScore.Text);
                 nuevo.Words = txtWords.Text;
                 nuevo.Helped = bool.Parse(chkHelp.Checked.ToString());
+                nuevo.User = (Usuario)Session["user"];
 
                 negocio.agregar(nuevo);
 
-                Response.Redirect("Default.aspx", false);
+                Response.Redirect("Home.aspx", false);
             }
             catch (Exception ex)
             {

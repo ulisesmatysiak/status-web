@@ -14,6 +14,8 @@ namespace presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Seguridad.sesionActiva(Session["user"]))
+                Response.Redirect("Login.aspx");
 
             if (!IsPostBack)
             {

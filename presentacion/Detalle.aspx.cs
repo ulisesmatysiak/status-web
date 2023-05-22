@@ -56,7 +56,7 @@ namespace presentacion
                 {
                     DailyNegocio negocio = new DailyNegocio();
                     negocio.eliminar(int.Parse(txtId.Text));
-                    Response.Redirect("Default.aspx");
+                    Response.Redirect("Home.aspx");
                 }
             }
             catch (Exception ex)
