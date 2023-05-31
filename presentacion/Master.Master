@@ -36,6 +36,7 @@
                     <%if (!negocio.Seguridad.sesionActiva(Session["user"]))
                         {%>
                     <a href="Login.aspx" class="btn btn-success me-2">Login</a>
+                    <a href="RegistroUsuario.aspx" class="btn btn-outline-primary m-auto">Registrarse</a>
                     <%
                         }
                         else

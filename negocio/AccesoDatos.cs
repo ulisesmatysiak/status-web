@@ -38,6 +38,14 @@ namespace negocio
             comando.CommandText = consulta;
         }
 
+        public void setearParametro(string nombre, object valor)
+        {
+            SqlParameter parametro = new SqlParameter(nombre, valor);
+            comando.Parameters.Add(parametro);
+
+            //comando.Parameters.AddWithValue(nombre, valor);
+        }
+
         public void ejecutarLectura()
         {
             comando.Connection = conexion;
@@ -66,12 +74,18 @@ namespace negocio
             }
         }
 
-        public void setearParametro(string nombre, object valor)
+        public int ejecutarAccionScalar()
         {
-            SqlParameter parametro = new SqlParameter(nombre, valor);
-            comando.Parameters.Add(parametro);
-
-            //comando.Parameters.AddWithValue(nombre, valor);
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                return int.Parse(comando.ExecuteScalar().ToString());
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public void cerrarConexion()

@@ -66,7 +66,7 @@
             <li>Fecha del registro.</li>
             <li>Score: El puntaje del día.</li>
             <li>Words: En este campo se mostrará lo que escribas sobre tu día. </li>
-            <li>Help ? Si fue de ayuda escribir sobre tu día se mostrara tildado en lo contrario sin tildar.</li>
+            <li>Help ? Si fue de ayuda escribir sobre tu día se mostrara tildado, de lo contrario sin tildar.</li>
             <li>Botón de detalle para acceder a la pantalla de Detalle donde se podra eliminar el registro.</li>
         </ul>
     </footer>

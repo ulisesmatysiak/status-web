@@ -13,7 +13,7 @@ namespace presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!(Page is Default || Page is Login))
+            if (!(Page is Default || Page is Login || Page is RegistroUsuario))
             {
                 if (!Seguridad.sesionActiva(Session["user"]))
                     Response.Redirect("Login.aspx", false);

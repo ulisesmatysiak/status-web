@@ -36,7 +36,8 @@ namespace presentacion
             }
             catch (Exception ex)
             {
-                throw ex;
+                Session.Add("Error", ex);
+                Response.Redirect("Error.aspx");
             }
         }
     }
