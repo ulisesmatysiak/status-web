@@ -23,6 +23,11 @@ namespace presentacion
 
             try
             {
+                if (Validacion.validarVacio(txtEmail) || Validacion.validarVacio(txtPass))
+                {
+                    Session.Add("Error", "Debes completar ambos campos");
+                    Response.Redirect("Error.aspx");
+                }
                 user.Email = txtEmail.Text;
                 user.Pass = txtPass.Text;
                 if (negocio.Login(user))
