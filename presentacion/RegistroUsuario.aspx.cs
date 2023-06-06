@@ -23,11 +23,20 @@ namespace presentacion
                 Usuario user = new Usuario();
                 UserNegocio negocio = new UserNegocio();
 
-                user.Email = txtEmail.Text;
-                user.Pass = txtPass.Text;
-                user.Id = negocio.insertarNuevo(user);
-                Session.Add("user", user);
-                Response.Redirect("Home.aspx", false);
+                string email = txtEmail.Text;
+
+                if (!negocio.cuentaRegistrada(email))
+                {
+                    user.Email = txtEmail.Text;
+                    user.Pass = txtPass.Text;
+                    user.Id = negocio.insertarNuevo(user);
+                    Session.Add("user", user);
+                    Response.Redirect("Home.aspx", false);
+                }
+                else
+                {
+                    lblMensaje.Text = "Ya existe una cuenta registrada con este E-Mail";
+                }
             }
             catch (Exception ex)
             {

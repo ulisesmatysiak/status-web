@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using dominio;
 
@@ -63,6 +65,27 @@ namespace negocio
             {
                 datos.cerrarConexion();
             }
+        }
+
+        public bool cuentaRegistrada(string email)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("SELECT COUNT(*) from USERS WHERE email = @email");
+                datos.setearParametro("@email",email);
+                int count = datos.ejecutarAccionScalar();
+                return count > 0;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+            
         }
     }
 }

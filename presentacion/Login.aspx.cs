@@ -22,15 +22,17 @@ namespace presentacion
             UserNegocio negocio = new UserNegocio();
 
             try
-            {
-                Session.Add("Error", "Debes completar ambos campos");
-                Response.Redirect("Error.aspx");
+            {              
                 user.Email = txtEmail.Text;
                 user.Pass = txtPass.Text;
                 if (negocio.Login(user))
                 {
                     Session.Add("user", user);
                     Response.Redirect("Home.aspx", false);
+                }
+                else
+                {
+                    lblMensaje.Text = "El E-Mail o la contraseña son incorrectos";
                 }
             }
             catch (Exception ex)

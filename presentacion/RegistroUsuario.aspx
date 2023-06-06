@@ -16,6 +16,9 @@
             </div>
             <asp:Button Text="Registrarse" runat="server" CssClass="btn btn-primary" ID="btnRegistrarse" OnClick="btnRegistrarse_Click"/>
             <a href="/">Cancelar</a>
+            <div class="mb-3">
+                <asp:Label ID="lblMensaje" runat="server" CssClass="text-danger" />
+            </div>
         </div>
     </div>
 </asp:Content>
