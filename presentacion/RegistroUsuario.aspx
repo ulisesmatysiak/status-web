@@ -7,11 +7,11 @@
         <div class="col-4">
             <h2>Creá tu perfil</h2>
             <div class="mb-3">
-                <label class="form-label text-white">Email </label>
+                <label for="txtEmail" class="form-label text-white">Email </label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtEmail" />
             </div>
             <div class="mb-3">
-                <label class="form-label text-white">Password </label>
+                <label for="txtPass" class="form-label text-white">Password </label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtPass" TextMode="Password" />
             </div>
             <asp:Button Text="Registrarse" runat="server" CssClass="btn btn-primary" ID="btnRegistrarse" OnClick="btnRegistrarse_Click"/>
