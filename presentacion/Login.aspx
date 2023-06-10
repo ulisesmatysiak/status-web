@@ -6,11 +6,11 @@
     <div class="row g-3">
         <div class="col-md-6">
             <div class="mb-3">
-                <label class="form-label">Email: </label>
+                <label class="form-label text-white">Email: </label>
                 <asp:TextBox runat="server" ID="txtEmail" CssClass="form-control" TextMode="Email" Required="" />
             </div>
             <div class="mb-3">
-                <label class="form-label">Password: </label>
+                <label class="form-label text-white">Password: </label>
                 <asp:TextBox runat="server" ID="txtPass" CssClass="form-control" TextMode="Password" Required="" />
             </div>
             <asp:Button Text="Acceder" runat="server" ID="btnAcceder" CssClass="btn btn-primary" OnClick="btnAcceder_Click" />
